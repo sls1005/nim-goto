@@ -40,4 +40,4 @@ main()
 
 As we know, Nim code can be compiled to C. Although Nim itself doesn't have `goto`, we can affect the generated C code and create a label.
 
-Note that this can only be used with the C-like backends. In addition to that, labels may also used by Nim compiler. To prevent conflicts, underscores should never be a part of a label name.
+Note that this can only be used with the C-like backends. In addition to that, labels may also be used by Nim compiler. To prevent conflicts, underscores should never be a part of a label name.
