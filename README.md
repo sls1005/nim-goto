@@ -36,8 +36,14 @@ proc main =
 main()
 ```
 
-### How it works?
+### How it works
 
-As we know, Nim code can be compiled to C. Although Nim itself doesn't have `goto`, we can affect the generated C code and create a label.
+As we know, Nim code can be compiled to C. Although Nim itself doesn't have `goto`, we can still put a label in the generated C code.
 
-Note that this only works on C-like backends. In addition to that, labels also used by the Nim compiler. To prevent conflicts, underscores should never be a part of a label name.
+### Note
+
++ As this emits C code, it can only be used with the C-like backends.
+
++ The Nim compiler also use labels in the C code. So please never use a label whose name with one or more underscores (`_`) in its name, or the result is unpredictable.
+
++ This is unstable. Use it on your own risk.
