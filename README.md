@@ -44,6 +44,6 @@ As we know, Nim code can be compiled to C. Although Nim itself doesn't have `got
 
 + As this emits C code, it can only be used with the C-like backends.
 
-+ The Nim compiler also use labels in the C code. So please never use a label whose name with one or more underscores (`_`) in its name, or the result is unpredictable.
++ The Nim compiler also use labels in the C code. So please never use a label with one or more underscores (`_`) in the name, or the result is unpredictable.
 
-+ This is unstable. Use it on your own risk.
++ This is unstable.
