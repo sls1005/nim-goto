@@ -5,8 +5,7 @@ macro label*(labelName, body: untyped): untyped =
   let name = repr(labelName)
   result = quote do:
     {.emit: `name` & ":".}
-    block:
-      `body`
+    `body`
 
 macro goto*(labelName: untyped): untyped =
   expectKind(labelName, nnkIdent)
